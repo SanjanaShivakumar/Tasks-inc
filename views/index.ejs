@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Display Information</title>
+</head>
+<body>
+<h2>Quotes from the Database</h2>
+<ul class="quotes">
+<% for(var i=0;i<quotesView.length;i++){ %>
+    <li class="quote">
+        <span> <%= quotesView[i].name %> : </span>
+        <span> "<%= quotesView[i].quote %>"</span>
+    </li>
+<%}%>
+</ul>
+<div>
+    <h2>Update Quotes</h2>
+    <p>This quote must be replaced</p>
+    <button id="update-button">Replace quote</button>
+</div>
+<br><hr><br>
+<div>
+    <h2>Delete Quotes</h2>
+    <p>This quote must be deleted</p>
+    <button id="delete-button">Delete quote</button>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
