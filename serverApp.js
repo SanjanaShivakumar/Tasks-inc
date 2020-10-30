@@ -28,7 +28,7 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
        .catch(error => console.error(error))
    });
    //READ OPERATION
-   crudApp.get('/getData',(req,res)=>{
+   crudApp.get('/',(req,res)=>{
       const cursor = db.collection('quotes').find().toArray()
       .then(results => {
         console.log(results);
